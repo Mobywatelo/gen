@@ -7,14 +7,14 @@ document.querySelector(".login").addEventListener('click', () => {
 
 var welcome = "Dzień dobry!";
 
-var hours = new Date().getHours();
-if (hours >= 18 || hours < 4){
+var date = new Date();
+if (date.getHours() >= 18){
     welcome = "Dobry wieczór!"
 }
 document.querySelector(".welcome").innerHTML = welcome;
 
 function toHome(){
-    location.href = '/home?' + params;
+    location.href = 'home.html?' + params;
 }
 
 var input = document.querySelector(".password_input");
